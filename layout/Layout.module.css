@@ -1,0 +1,12 @@
+.header {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  margin: 10px 10px;
+}
+
+.headerBtn {
+  display: flex;
+  align-content: flex-end;
+  gap: 10px;
+}
