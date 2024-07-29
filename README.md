@@ -1,40 +1,43 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+![KakaoTalk_Photo_2024-07-29-23-13-11](https://github.com/user-attachments/assets/3a40b379-610d-4e37-ad0e-62876bd4d46f)
 
-## Getting Started
+<aside>
+🛒 개인 미니 프로젝트로 진행한 쇼핑몰 웹 입니다.
 
-First, run the development server:
+페이지는 총 6개로 준비 하였지만, 아직 초기 버전이기에 메인 페이지, 상품 페이지, 상품 상세 페이지, 장바구니 4페이지만 구성 되어있습니다.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Next.js로 SSR방식으로 프론트엔드를 구성하였고, JSON SERVER로 백엔드를 구성하였습니다.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+</aside>
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+## 🛠️ 사용 기술 및 라이브러리
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+- JavaScript
+- React
+- Next.js
+- AXIOS
+- JSON-SERVER
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+## 🧑🏻‍💻 담당 기능
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+- 메인 페이지
+    - 첫번째~네번째 상품 조회
+    - 더보기 버튼 클릭시 상품페이지로 이동
+- 상품 페이지
+    - 모든 상품 리스트 조회
+    - 상품 클릭시 상품 상세 페이지로 이동
+- 상품 상세 페이지
+    - ID 별로 상품 상세 조회
+    - 장바구니 추가 버튼 클릭시 장바구니 추가 후, 장바구니 페이지로 이동
+- 장바구니 페이지
+    - 장바구니에 추가한 상품 리스트 조회
+    - 삭제하기 버튼 클릭시 리스트에서 삭제
+    - 상품의 총 개수, 총 가격 출력
 
-## Learn More
+## 💡 느낀점
 
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- 처음에는 Pages 디렉터리에서 어떻게 컴포넌트 들을 이용해야 하는지 고민을 많이 하게되었습니다.
+- 초반에는 각 Page에 index.jsx 파일에 기능을 구현을 하였지만, 앞 방법보단 index.jsx 파일에는 컴포넌트화 하여 보여주는것이 구분 하다 판단하여, Components 디렉터리에 생성하였습니다.
+- 상품 리스트 같이 여러번 사용할 수 있는 공통 컴포넌트로 만들어 사용하였습니다.
+- 원래 Axios로 비동기 처리 하는 함수는 컴포넌트 안에 집어넣어서 사용하였지만, api 디렉터리를 따로 생성하여 비동기 처리하는 기능을 모아 두었습니다.
+- 다음 버전으로 업데이트 할 때, 다른 기능들을 추가로 사용하여 로그인 기능까지 구현 할 생각입니다.
+- 그리고 앞서 만든 React 프로젝트를 JS → TS로 마이그레이션을 했듯이 진행할 예정입니다.
